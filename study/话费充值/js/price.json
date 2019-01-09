@@ -1,0 +1,38 @@
+[
+{
+  "cardId": "1",
+  "cardName":"10M",
+  "price": "3",
+  "faceValue": ""
+},
+  {
+  "cardId": "2",
+  "cardName":"30M",
+  "price": "5",
+  "faceValue": ""
+},
+  {
+  "cardId": "3",
+  "cardName":"70M",
+  "price": "10",
+  "faceValue": ""
+},
+  {
+  "cardId": "4",
+  "cardName":"150M",
+  "price": "20",
+  "faceValue": ""
+},
+  {
+  "cardId": "5",
+  "cardName":"500M",
+  "price": "30",
+  "faceValue": ""
+},
+  {
+  "cardId": "6",
+  "cardName":"1G",
+  "price": "50",
+  "faceValue": ""
+}
+  ]

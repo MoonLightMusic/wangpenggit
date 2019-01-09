@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ajax for springMVC</title>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#getsms").click(function() {
+            var saveDataAry = [];
+            var USERID = document.getElementById("phoneNumber").value;
+            var data1 = {
+                "userId" : USERID
+            };
+            saveDataAry.push(data1);
+            $.ajax({
+                type : "POST",
+                url : "saveUser",
+                dataType : "json",
+                contentType : "application/json",
+                data : JSON.stringify(saveDataAry),
+                success : function(data) {
+                    alert(data)
+                    console.log(data);
+                    $("#userId").html(data[0].userId);
+                    $("#userName").html(data[0].userName);
+                    $("#userClass").html(data[0].classId);
+                }
+            });
+        });
+    });
+</script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="../js/json.js"></script>
+</head>
+<body>
+<form method="POST" action="register">
+    <table>
+        <tr>
+            <td>电话号码:</td>
+            <td><input id="phoneNumber" type="text" name="电话号码"></td>
+        </tr>
+        <tr>
+            <td><input id="getsms" type="button" value="获取6位短信验证码" /></td>
+        </tr>
+        <tr>
+            <td>验证码:</td>
+            <td><input id="phonesms" type="text" name="电话号码"></td>
+        </tr>
+        <tr>
+            <td><input id="submit" type="button" value="登录" onclick="" /></td>
+        </tr>
+    </table>
+</form>
+
+
+
+</body>
+</html>
+

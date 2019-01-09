@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="a">hu获取数据</button>
+<pre id="b"></pre>
+<script>
+    var a=document.getElementById("a");
+    var b=document.getElementById("b");
+    a.addEventListener('click',ajax);
+    function ajax() {
+        var xhr= windows.XMLHttpRequest ? (new XMLHttpRequest()):(new ActiveXObject('Mircosoft.XMLHTTP'));
+        xhr.open('GET','./data.json');
+        xhr.send();
+    }
+
+
+
+</script>
+</body>
+</html>

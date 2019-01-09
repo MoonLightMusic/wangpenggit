@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type=text/css>
+        #myCanvas{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+         border-radius: 25px;
+         #picture{
+             height: 200px;
+             background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+             background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+             background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+             background: linear-gradient(red, blue); /* 标准的语法（必须放在最后） */
+         }
+        }
+    </style>
+</head>
+<body>
+<header>头部</header>
+<hgroup></hgroup>
+<nav>导航条</nav>
+<footer>底部</footer>
+<audio src=".mp3">
+    <source src=".mp3"  type="audio/mpeg"     />
+</audio>
+<canvas id="myCanvas">
+    <meter   value="220" min="20" max="380"   optimum="200"  high="240"></meter>
+</canvas>
+<div id="picture"></div>
+</body>
+</html>

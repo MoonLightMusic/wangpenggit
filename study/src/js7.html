@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--arguments：调用数组-->
+    <!--function inner（）{-->
+    <!--console。log（arguments.length）;-->
+    <!--}-->
+    <!--inner(10,5);-->
+    <!--inner输入的数，在函数内形成数组-->
+    <!--function getAvg（）{-->
+    <!--var sum=0，len=arguments。length，i；-->
+    <!--for（i=0；i《len；i++）{-->
+    <!--sum+=arguments【i】；-->
+    <!--}-->
+    <!--return sum/len;-->
+    <!--}-->
+    <!--var avg=getAvg(1,2,3,4,);-->
+    <!--arguments.length;参数的数量-->
+    <script>
+
+        // var userName=prompt("请输入用户名");
+        // var userPwd=prompt("请输入密码");
+        // var sure=prompt("请输入验证码");
+        // function login(n1,n2,n3){
+        //     if(isNaN(arguments [1])){
+        //         //补充代码
+        //         alert("密码错误");
+        //         return ;
+        //     }
+        //     if(arguments[2].length>=4){//补充代码
+        //         alert("验证码不小于4位");
+        //     }
+        // }
+        // login(userName,userPwd,sure);
+        function getAvg(){
+            //对所有参数进行求和
+            var sum=0,len=arguments.length,i;
+            for(i=0;i<len;i++){
+
+                sum=sum+arguments[i];
+            }
+            return sum/len;
+        }
+        var avg=getAvg(5,66,45,32,88,24,100,50)
+        document.write(parseInt(avg));
+   </script>
+</head>
+<body>
+
+
+</body>
+</html>

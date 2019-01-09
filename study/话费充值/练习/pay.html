@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付界面</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            color: #BDBDBC;
+            font-size: 15px;
+            background-color: #ededed;
+            font-family: 微软雅黑;
+            font-weight: normal;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+        }
+        .pay-phone{
+            color: #BDBDBC;
+            font-size: 12px;
+            text-align: center;
+            height: 70px;
+        }
+        .pay-money{
+            color: #BDBDBC;
+            font-size: 12px;
+            height: 100px;
+            text-align: center;
+        }
+        .pay-mode{
+            padding: 0 10px 0 10px ;
+
+            height: 130px;
+        }
+        .pay-style{
+            background-color: #d9dde1;
+            width: 20%;
+            height:60px;
+            text-align: center;
+            line-height: 30px;
+            margin: 0 10px 0 10px ;
+            color: black;
+        }
+        .confirm{
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background-color: #00a4f5;
+            color: white;
+            position: absolute;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<div class="header">
+    <h2>话费充值</h2>
+</div>
+<div class="pay-phone" id="phone">
+    <!--支付号码--><p>支付号码为：</p>
+    <hr />
+</div>
+<div class="pay-money" id="money">
+    <p>支付金额为：</p>
+
+</div>
+<div class="pay-mode">
+    <p>支付方式：</p>
+    <button class="pay-style" value="银行卡支付">银行卡支付</button>
+    <button class="pay-style" value="微信支付">微信支付</button>
+    <button class="pay-style" value="支付宝支付">支付宝支付</button>
+</div>
+<button class="confirm" value="确认支付">确认支付</button>
+
+
+<script>
+    // window.location.href="index.html";
+
+document.getElementById("phone").innerText="支付号码为："+num;
+
+
+
+
+</script>
+</body>
+</html>

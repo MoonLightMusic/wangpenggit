@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style-position:none;
+}
+body{
+    font-family: 微软雅黑;
+    color: #14191e;
+}
+.main{
+    width: 1200px;
+    height: 450px;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+}
+.banner {
+    width: 1200px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+.banner-slide{
+    width: 1200px;
+    height: 450px;
+    background-repeat:no-repeat ;
+    position: absolute;
+    display: none;//把图片隐藏起来；
+}
+.slide-active{
+ display: block;//显示最上方的图片；
+}
+.botton{
+ position: absolute;
+    height: 80px;
+    width: 40px;
+    left: 200px;
+    top: 25%;
+    margin-top:80px;
+    /*background-color: blue;*/
+}
+.next{
+    left: auto;
+    right: 0;
+
+}
+.prev{
+    transform: rotate(180deg);
+}
+.botton:hover{
+    background-color: #333333;
+    opacity: 05.;
+}
+.dots{
+    position: absolute;
+    right: 30px;
+    bottom: 24px;
+    text-align: right;
+}.dots span {
+     display: inline-block;
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     margin-bottom: 4px;
+     background: rgba(7, 17, 27, 0.4);
+     box-shadow:0,0,0,2px rgba(255,255,255,0.);//小白框
+    margin-left: 8px;
+    cursor:pointer;
+ }
+ .dots span.actibve{
+     box-shadow:0 0 0 2px rgba(7,17,27,4) inset;
+     background: #fff;
+  }

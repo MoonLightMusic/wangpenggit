@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        var data = [
+            {
+                "cardId": "1",
+                "cardName":"10M",
+                "price": "3",
+                "faceValue": ""
+            },
+            {
+                "cardId": "2",
+                "cardName":"30M",
+                "price": "5",
+                "faceValue": ""
+            },
+            {
+                "cardId": "3",
+                "cardName":"70M",
+                "price": "10",
+                "faceValue": ""
+            },
+            {
+                "cardId": "4",
+                "cardName":"150M",
+                "price": "20",
+                "faceValue": ""
+            },
+            {
+                "cardId": "5",
+                "cardName":"500M",
+                "price": "30",
+                "faceValue": ""
+            },
+            {
+                "cardId": "6",
+                "cardName":"1G",
+                "price": "50",
+                "faceValue": ""
+            }
+        ];
+        $(document).ready(function(){
+            $("button").click(function(){
+                for(var i in data) {
+                    $("#div1").load("3.html data[i].cardName");
+                }});
+        });
+    </script>
+    <script src="../话费充值/js/jquery.js"></script>
+    <script src="../话费充值/js/json.js"></script>
+    <script src="../瀑布流JQ布局代码/js/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="div1"><h2>使用 jQuery AJAX 修改文本内容</h2></div>
+<button>获取外部内容</button>
+
+</body>
+</html>

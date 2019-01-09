@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script  type="javascript">
+      var years=prompt("请输入您出生的年份")
+        var months=prompt("请输入您出生的月份" )
+         var data=prompt(     "请输入您出生的日期")
+        function inner() {
+            var sum = 0
+            if (years % 4 == 0 && years % 100 != 0 || years % 400 == 0) {
+                arguments[1] = 29;
+            }
+            for (var i=0, i<months-1, i++)
+            // if(years%4==0 && years%100!=0 || years%400==0){
+            //     arguments[1]=29;
+            // }
+
+            // for(var i=0;i<m-1;i++){
+            {
+                sum += arguments[i];
+                sum += data;
+                document.write("您的生日在" + years + "年" + sum + "日")
+            return sum;
+            }
+
+        }
+       months(31,28,31,30,31,30,31,31,30,31,30,31);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

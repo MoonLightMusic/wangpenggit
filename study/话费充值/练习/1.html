@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+    .header{
+     text-align: center;
+     height: 200px;
+        width: 200px;
+    }
+    ul{
+        list-style: none;
+    }
+        li{
+            height: 100px;
+            width: 100px;
+            float: left;
+            background-color: #e4f2fc;
+            line-height: 100px;
+        }
+        .footer{
+            background-color: #ababab;
+            width: 100%;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<ul class="header">
+
+    <a href="#"><li id="price1"  class="navList" onclick="payment()" value="15" >15元</li></a>
+    <a href="#"><li id="price2"  class="navList" onclick="payment()"  value="20">20元</li></a>
+
+</ul>
+<div class="footer" id="foot">
+    <a href="#">支付</a>
+</div>
+<script >
+    $(document).ready(function(){
+        var navList=document.getElementsByClassName("navList");
+        for(let i=0;i<navList.length;i++){
+            navList[i].onclick = function(){
+                this.style.backgroundColor = "#00a4f5";
+                this.style.color="#ededed";
+                for (var i = 0; i < $(this).siblings().length; i++) {
+                    $(this).siblings().css("background","");
+
+                }
+            }
+
+        }
+    });
+// function payment() {
+//         var Price1 =document.getElementById("price1").value;
+//         var str = String(Price1);
+//         var num = parseInt(str);
+//         document.getElementById("foot").innerHTML="支付:"+num+"元";
+//
+// }
+// function myFunction() {
+//     var Price2 =document.getElementById("price2").value;
+//     var str = String(Price2);
+//     var num = parseInt(str);
+//     document.getElementById("foot").innerHTML="支付:"+num+"元";
+// }
+
+// function payment() {
+//     // var Prece1 = document.getElementById("price1");
+//   var Price = document.getElementsByClassName("price");
+//
+//   for (var i=0;i<Price.length;i++) {
+//
+//            var str = String(Price[i].value);
+//            var num = parseInt(str);
+//            document.getElementById("foot").innerHTML = "支付" + num + "元";
+//            return;
+//   }
+function payment() {
+var Price = document.getElementsByClassName("price");
+
+}
+
+
+    
+    
+    
+// }
+</script>
+</body>
+</html>

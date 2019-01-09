@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css" >
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            min-width:700px ;
+        }
+        #header,#footer{
+            height: 100px;
+            width: 100%;
+            background-color: pink;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+        }
+        #right,#left,#middle{
+            position: relative;
+            float: left;
+            min-height: 300px;
+        }
+        #contain{
+            padding: 0 220px 0 200px;
+        }
+        #middle{
+            width: 100%;
+            background-color: #0033cc;
+        }
+        #left{
+            width: 200px;
+            background-color: red;
+            margin-left: -100%;
+            left:-200px;
+        }
+        #right{
+            width: 220px;
+            background-color: orange;
+            margin-right: -100%;
+            /*right:-20px;*/
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <h4>header</h4>
+</div>
+<div id="contain">
+    <div id="middle"><h4>middle</h4>这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间这是中间</div>
+    <div id="left"><h4>left</h4>这是左边这是左边这是左边这是左边</div>
+    <div id="right"><h4>right</h4>这是右边这是右边这是右边这是右边</div>
+</div>
+<div id="footer"><h4>footer</h4>
+</div>
+
+</body>
+</html>

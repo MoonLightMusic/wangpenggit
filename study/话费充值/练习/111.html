@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script type="text/javascript">
+        //使用javascript通过className来获取元素
+        function getElementsbyClassName(n){
+
+            var classElements=[],allElements=document.getElementsByTagName('*');
+
+            for(var i=0;i<allElements.length;i++){
+                if(allElements[i].className==n){
+                    classElements[classElements.length]=allElements[i];
+                }
+            }
+
+            return classElements;
+        }
+
+
+    </script>
+    <style type="text/css" >
+        .shouye{
+            font-size:12px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="shouye" >张三</div>
+<script type="text/javascript">
+    var XX=getElementsbyClassName('shouye');
+    for(var i=0;i<XX.length;i++){
+        XX[i].className="";
+    }
+</script>
+</body>
+</html>

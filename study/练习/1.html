@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style type="text/css">
+        #aaa,#bbb
+        {
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #bbb
+        {
+            padding:50px;
+            display:none;
+        }
+
+
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#aaa").mousemove(function(){
+                $("#bbb").slideDown("slow").slideUp("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="aaa" >你好</div>
+<div id="bbb">再见</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+h1,p{
+    color:red;
+    text-align: center;
+}
+a{
+    font-size: 12px;
+}
+a:link{
+    color: blue;
+    text-decoration: none;/*未访问 */
+          }
+a:visited{
+    color: purple;/*已访问*/
+    text-decoration: none;
+}
+a:hover{
+    corlor:#03c;/*鼠标悬停*/
+    text-decoration: underline;
+    font-size: 120%;
+}
+a:active{
+    corlor:#03c;/*按下鼠标*/
+    text-decoration: none;
+}
+inside{
+    list-style-position: inside;
+
+}
+outside{
+    list-style-position: outside;
+}
+table{
+    height: 300px;
+    width: 200px;
+}
+table,td,tr{
+    border: 1px solid purple;
+    border-collapse: collapse;
+}
+tr:nth-child(odd){
+    background-color:yellow ;
+}
+.line{
+    width: 500px;
+    height: 1px;
+    border-top:1px solid pink ;
+}
+

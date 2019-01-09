@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/json.js"></script>
+    <script src="../js/jQueryRotate.2.2.js"></script>
+
+</head>
+<body style="background: #ededed">
+<input type="text" value="请输入或选择手机号码" id="myInput" onchange="myFunction()" maxlength="11"  />
+<div id="put">支付：</div>
+</body>
+<script >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   //
+   //  $(function () {
+   //      $("input").focus("");
+   //      if(this.value=='请输入或选择手机号码') {
+   //          document.getElementById("input").value="";
+   //      }
+   //  });
+   //
+   // $(function () {
+   //     $("input").blur("");
+   //     if (this.value == '') {
+   //         document.getElementById("input").value = "请输入或选择手号码";
+   //     }
+   // });
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //  $("input").focus(function () {
+   //          $("input").css("value","");
+   //      });
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+   //
+    function myFunction() {
+        var t= document.getElementById("myInput");
+        var T =t.value;
+        var myreg=/^[1][34578][0-9]{9}$/;
+        console.log(T);
+        if (!myreg.test(T)) {
+            alert("这不是号码");
+        } else {
+         return true;
+        }
+
+    }
+
+
+
+    //     $.ajax({
+    //         url: location.href,
+    //         type: 'POST',
+    //         datatype: 'json',
+    //         data: '18元',
+    //         success: function (data) {
+    //             var text = JSON.stringify(data);
+    //             $("put").append(text);
+    //         }, error: function (err) {
+    //
+    //         }
+    //     });
+    // }console.log(data);
+
+</script>
+</html>

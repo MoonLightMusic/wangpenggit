@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        header{
+            color: #9fcdff;
+            width: 100px;
+            height: 100px;
+
+        }
+        button{
+            width: 60x;
+            height: 40px;
+        }
+
+    </style>
+    <script src="../话费充值/js/jquery.js"></script>
+    <script src="../话费充值/js/jquery-3.3.1.min.js"></script>
+    <script src="../话费充值/js/json.js"></script>
+</head>
+<body>
+<header  id="div1"><h2>你好</h2></header>
+<button>你好</button>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $("#div1").load("../js/price.json");
+        });
+        });
+
+
+
+
+</script>
+</body>
+</html>

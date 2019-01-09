@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--float:浮动-->
+    <!--clear：清除-->
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            margin: 0 auto;/*页面居中*/
+            width: 1200px;
+            height: 800px;
+            /*border: 1px  red  solid;*/
+
+            text-align: center;
+        }
+        body{
+            font-size: 14px;
+        }
+        #header{
+            height: 100px;
+            width: 1200px;
+            clear: both;
+            /*border: 1px solid blue;*/
+            background-color: #0033cc;
+            border-bottom:10px ;
+
+        }
+        #main{
+            height: 580px;
+            width: 1200px;
+            float: left;
+            /*border: 1px solid;*/
+            border-bottom: 5px;
+            background-color: #33cccc;
+        }
+        #sidebar {
+            height: 580px;
+            width: 300px;
+            float: left;
+            /*border: 1px solid;*/
+            border-bottom: 100px;
+            background-color: pink;
+        }
+            #consent{
+                height: 580px;
+                width: 200px;
+                float: right;
+                background-color: yellow;
+
+
+            }
+        #footer{
+            height: 100px;
+            width: 1200px;
+            clear: both;
+            border-top:10px ;
+
+            /*border: 1px solid;*/
+            background-color: #0033cc;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+<div id="header">header</div>
+<div id="main">main
+<div id="sidebar">sidebar    </div>
+    <div id="consent">consent</div>
+</div>
+<div id="footer">footer </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/json.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index1.js"></script>
+    <link rel="stylesheet" href="../bootstrap-4.2.1-dist/css/bootstrap-grid.css">
+</head>
+<body>
+<div class="header">
+    <!--输入框-->
+    <form>
+         <input type="text"  value="请输入或选择手机号码" class="phone " id="input"  maxlength="11" autocomplete="off" style="outline: none"  oninput = "value=value.replace(/[^\d]/g,'')" onblur="if(this.value==''){this.value='请输入或选择手机号码'}"    onfocus="if(this.value=='请输入或选择手机号码'){this.value=''}"    />
+
+         <!--<input type="reset"  value=""   name=""   style="outline: none"      class="delete" >-->
+
+         <div class="errorTip"  id="tip">暂不支持此格式号码充值</div>
+        <div  class="errorTip" id="noInput" >请输入手机号码      </div>
+
+         <!--<img src="3.png" height="19" width="23" class="down"/>-->
+     </form>
+    <!--<p >*全国流量，即时生效，当月有效，每月限充五次</P>-->
+    <!--菜单-->
+    <p  class="banner col-md-12   col-md-offset-6     ">*全国流量，即时生效，当月有效，每月限充五次</p>
+    <ul class="menu  menu-active  " id="inside" >
+            <li class="col-4 navList "   value="3"   id="1" ><br></li>
+            <li class="col-4 navList "   value="5"   id="2"><br></li>
+            <li class="col-4 navList "   value="10"  id="3"><br></li>
+            <li class="col-4 navList "   value="20"  id="4"><br><br</li>
+            <li class="col-4 navList "   value="30"  id="5"><br></li>
+            <li class="col-4 navList "   value="50"  id="6"><br></li>
+            <li class="a"  onclick="prev()" id="a1">话费充值</li>
+    </ul>
+    <ul class="price  "  id="surface">
+        <a href="#" class="sell" >
+            <li >10M<br><span>售价10元</span></li>
+            <li>20M<br><span>售价29元</span></li>
+            <li >50M<br><span>售价49元</span></li>
+            <li >100M<br><span>售价99元</span></li>
+            <li >200M<br><span>售价200元</span></li>
+            <li>500M<br><span>售价500元</span></li>
+            <li class="a" onclick="next()" id="a2">流量充值 </li>
+        </a>
+    </ul>
+<!--链接-->
+    <div class="bottom">
+        <a href="#">
+
+            <p class="b">优惠券红包</p>
+            <p class="c">请登录></p>
+
+        </a>
+    </div>
+        <div class="d" >
+
+            <p class="e" ><img src="image/index-image/2.png" height="30" width="27"/>闪电到账</p>
+            <p class="f" ><img src="image/index-image/2.png" height="30" width="27"/>不到账全额退款</p>
+
+        </div>
+<!--支付按钮-->
+   <a href="#"> <div  class="footer" id="pay" onclick="error()">立即支付</div></a>
+</div>
+
+<div class="extend">
+</div>
+
+
+
+<div class="hide" id="hidden">
+<div class="window" id="windows">
+    <div class="pay-main">
+    <div class="pay-name">
+        <h2>话费充值</h2>
+    </div>
+    <div class="pay-phone" id="pay-phone">
+        <!--支付号码--><p>支付号码为：</p>
+        <hr />
+    </div>
+    <div class="pay-money" id="pay-money">
+        <p>支付金额为：</p>
+
+    </div>
+    <div class="pay-mode">
+        <p>支付方式：</p>
+        <button class="pay-style" value="银行卡支付" onclick="one()">银行卡支付</button>
+        <button class="pay-style" value="微信支付"   onclick="one()">微信支付</button>
+        <button class="pay-style" value="支付宝支付" onclick="one()">支付宝支付</button>
+    </div>
+    <button class="confirm" value="确认支付" onclick="myFun()">确认支付</button>
+    </div>
+    <!--<div class="success">-->
+        <!--<p>支付成功！</p>-->
+        <!--<button value="返回" class="back" id="back">返回</button>-->
+
+    <!--</div>-->
+
+
+
+
+</div>
+<div class="modal" id="shade">
+
+</div>
+</div>
+
+
+</body>
+<!--<script src="">-->
+<!--&lt;!&ndash;点击事件&ndash;&gt;-->
+        <!--function next() {-->
+        <!--var Surface= document.getElementById("surface");-->
+        <!--var Inside=document.getElementById("inside");-->
+        <!--Surface.style.display="none";-->
+        <!--Inside.style.display="block";-->
+        <!--}-->
+        <!--function prev() {-->
+         <!--var Surface=document.getElementById("surface");-->
+         <!--var  Inside=document.getElementById("inside");-->
+            <!--Surface.style.display="block";-->
+            <!--Inside.style.display="none";-->
+        <!--}-->
+<!--// &lt;!&ndash;输入号码事件&ndash;&gt;-->
+         <!--function myFunction(){-->
+            <!--var l = document.getElementById("input");-->
+            <!--var Tip=document.getElementById("tip");-->
+            <!--var Surface=document.getElementById("surface");-->
+            <!--var Inside=document.getElementById("inside");-->
+            <!--var L= l.value;-->
+            <!--var len =L.length;-->
+            <!--var NoInput = document.getElementById("noInput");-->
+            <!--var Pay = document.getElementById("pay");-->
+             <!--NoInput.style.display = "none";-->
+            <!--if(len==0){-->
+                <!--Tip.style.display="none";-->
+            <!--}else if(len!=11&&len!=0){-->
+                    <!--Tip.style.display = "block";-->
+            <!--}else{-->
+                <!--Tip.style.display = "none";-->
+                <!--var myreg=/^[1][345678][0-9]{9}$/;-->
+                <!--if (!myreg.test(L)) {-->
+                    <!--return false;-->
+                <!--}else{-->
+                   <!--Inside.style.display="block";-->
+                   <!--Surface.style.display="none";-->
+                    <!--$(document).ready(function(){-->
+                        <!--var navList=document.getElementsByClassName("navList");-->
+                        <!--for(let i=0;i<navList.length;i++){-->
+
+                            <!--navList[i].onclick = function(){-->
+                                <!--this.style.backgroundColor = "#00a4f5";-->
+                                <!--this.style.color="#ededed";-->
+                                <!--var num = this.value;-->
+                                <!--document.getElementById("pay-money").innerText="支付金额为："+num+"元";-->
+                                <!--document.getElementById("pay").innerHTML="支付："+num+"元";-->
+                                <!--for (var i = 0; i < $(this).siblings().length; i++) {-->
+                                    <!--$(this).siblings().css("background","");-->
+                                    <!--$(this).siblings().css("color","#bdbdbc");-->
+                                    <!--}-->
+                            <!--}-->
+                            <!--}-->
+                        <!--});-->
+                    <!--}-->
+                <!--}-->
+         <!--}-->
+
+
+
+         <!--function error() {-->
+          <!--var NoInput = document.getElementById("noInput");-->
+          <!--var Input = document.getElementById("input");-->
+          <!--var Inside = document.getElementById("inside");-->
+         <!--if (Input.value=='请输入或选择手机号码'){-->
+        <!--NoInput.style.display="block";-->
+             <!--return;-->
+        <!--}else {-->
+             <!--NoInput.style.display = "none";-->
+          <!--}-->
+         <!--if (Inside.style.display="block"){-->
+             <!--// window.open("pay.html","支付界面","width=300,height=400,top=200,left=700 " );-->
+             <!--var Phone=document.getElementById("input").value;-->
+             <!--document.getElementById("pay-phone").innerText="支付号码为："+Phone;-->
+             <!--// document.getElementById("shade").classList.remove('hide');-->
+             <!--// document.getElementById("windows").classList.remove('hide');-->
+             <!--document.getElementById("hidden").style.display="block";-->
+
+
+         <!--}-->
+
+          <!--}-->
+     <!--function myFun() {-->
+         <!--document.getElementById("pay-main").style.display="none";-->
+         <!--document.getElementById("success").style.display="block";-->
+     <!--}-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--</script>-->
+</html>
